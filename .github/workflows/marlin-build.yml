@@ -22,6 +22,7 @@ jobs:
       - name: Compile firmware
         run: |
           docker run \
+            -u root:root \
             -e BOARD=${{env.BOARD}} \
             -e USE_TAG=${{env.TAG}} \
             -v $(pwd)/Firmware/Builds:/home/platformio/build \
