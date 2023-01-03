@@ -21,7 +21,6 @@ jobs:
 
       - name: Compile firmware
         run: |
-          chmod -R 777 /home/platformio && \
           docker run \
             -u root:root \
             -e BOARD=${{env.BOARD}} \
