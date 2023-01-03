@@ -32,7 +32,7 @@ jobs:
         with:
           tag: ${{env.TAG}}
           body: "Testing a build"
-          artifacts: "Firmware/Builds/*"
+          artifacts: "Firmware/Builds/${{env.BOARD}}/*"
           prerelease: false
           draft: true
           token: ${{ github.token }}
